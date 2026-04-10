@@ -10,8 +10,6 @@
 
 // ===============================
 
-
-
 // import React from 'react'
 
 // export const Child = ({sendData}) => {
@@ -20,27 +18,24 @@
 //   )
 // }
 
+import React, { useState } from "react";
 
+export const Child = ({ InpVal }) => {
+  const [storeTypeVal, setStoreTypeVal] = useState("");
 
-import React, { useState } from 'react'
+  const handleStoreTypeValue = (e) => {
+    setStoreTypeVal(e.target.value);
+  };
 
-export const Child = ({InpVal}) => {
-    const [storeTypeVal, setStoreTypeVal] = useState("")
-
-    const handleStoreTypeValue = (e) => {
-        setStoreTypeVal((e.target.value))
-    }
+  const handleSend = () => {
+    InpVal(storeTypeVal); // send to parent
+    setStoreTypeVal(""); // clear input
+  };
   return (
     <>
+      <input type="text" value={storeTypeVal} onChange={handleStoreTypeValue} />
 
-     <input type="text"  onChange={handleStoreTypeValue}/>
-
-    <button onClick={()=>InpVal(storeTypeVal)}>Send value</button>
-
-
-    
+      <button onClick={handleSend}>Send value</button>
     </>
-    
-
-  )
-}
+  );
+};

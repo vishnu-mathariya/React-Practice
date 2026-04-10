@@ -16,9 +16,7 @@
 //   )
 // }
 
-
 // ================================
-
 
 // import React, { useState } from 'react'
 // import { Child } from './passingDataCtoP'
@@ -29,7 +27,7 @@
 
 //     const handleSendCity = (city) =>{
 
-//         // normal btn logic 
+//         // normal btn logic
 
 //         // setSendCity(city);
 
@@ -54,28 +52,21 @@
 //   )
 // }
 
-
-
-
-import React, { useState } from 'react'
-import { Child } from './passingDataCtoP'
+import React, { useState } from "react";
+import { Child } from "./passingDataCtoP";
 
 export const Parent = () => {
+  const [inputVal, setInputVal] = useState("");
 
-    const [inputVal, setInputVal] = useState("");
-
-    const handleInputVal = (value) =>{
-        setInputVal(value)
-    }
-
-    
+  const handleInputVal = (value) => {
+    setInputVal(value);
+  };
 
   return (
     <>
-    <Child InpVal = {handleInputVal}/>
-  
-    <p >Input value form child: {inputVal}</p>
+      <Child InpVal={handleInputVal} />
+
+      <p>Input value form child: {inputVal}</p>
     </>
-    
-  )
-}
+  );
+};
