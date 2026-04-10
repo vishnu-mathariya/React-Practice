@@ -1,4 +1,5 @@
 import "./App.css";
+import { ParentComp } from "./miniApp/parentComp.jsx";
 import {CounterApp} from "./practiceQues/counterApp.jsx";
 import { LoginLogout } from "./practiceQues/loginLogout.jsx";
 import { Parent } from "./practiceQues/parent.jsx";
@@ -16,7 +17,8 @@ function App() {
 
       {/* <PassCityPtoC City="Pune"/> */}
 
-      <Parent/>
+      {/* <Parent/> */}
+      <ParentComp/>
     </>
   )
 }
