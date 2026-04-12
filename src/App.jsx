@@ -1,7 +1,7 @@
 import "./App.css";
 import { ParentComp } from "./miniApp/parentComp.jsx";
 import {CounterApp} from "./practiceQues/counterApp.jsx";
-import { FruitList, Fruits, RenderList, Student } from "./practiceQues/list&Keys.jsx";
+import { FruitList, Fruits, RenderList, RenderUser, RenderUser1, ShowProduct, ShowTask, Student } from "./practiceQues/list&Keys.jsx";
 import { LoginLogout } from "./practiceQues/loginLogout.jsx";
 import { Parent } from "./practiceQues/parent.jsx";
 import { PassCityPtoC } from "./practiceQues/passCityPtoC.jsx";
@@ -24,6 +24,10 @@ function App() {
       <Student/>
       <Fruits/>
       <RenderList/>
+      <RenderUser/>
+      <ShowTask/>
+      <ShowProduct/>
+      <RenderUser1/>
     </>
   )
 }
