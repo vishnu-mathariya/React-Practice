@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const fruits = ["Apple", "Mango", "Banana"];
 export const FruitList = () => {
   return (
@@ -182,14 +184,38 @@ const users1 = [
 ];
 
 export const RenderUser1 = () => {
+  const [users, setUsers] = useState(users1);
+
+  const handleDeletBtn = (userId, skillToDelete) => {
+    const updateUsers = users.map((user) => {
+      if (user.id === userId) {
+        return {
+          ...user,
+          skills: user.skills.filter((skill) => skill !== skillToDelete),
+        };
+      }
+      return user;
+    });
+
+    setUsers(updateUsers);
+  };
+
   return (
     <ul>
-      {users1.map((userName) => (
-        <li key={userName.id}>
-          {userName.name}
+      {users.map((user) => (
+        
+        <li key={user.id}>
+          {user.name}
           <ul>
-            {userName.skills.map((skill) => (
-              <li key={skill}>{skill}</li>
+            {user.skills.map((skill) => (
+              <li key={skill}>
+                {skill}
+                <p>
+                <button onClick={() => handleDeletBtn(user.id, skill)}>
+                  Delete
+                </button>
+                </p>
+              </li>
             ))}
           </ul>
         </li>
