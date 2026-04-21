@@ -1,6 +1,7 @@
 import "./App.css";
 import { ParentComp } from "./miniApp/parentComp.jsx";
 import {CounterApp} from "./practiceQues/counterApp.jsx";
+import { CounterRenderCheck } from "./practiceQues/counterRenderCheck.jsx";
 import { FruitList, Fruits, RenderList, RenderUser, RenderUser1, ShowProduct, ShowTask, Student } from "./practiceQues/list&Keys.jsx";
 import { LoginLogout } from "./practiceQues/loginLogout.jsx";
 import { Parent } from "./practiceQues/parent.jsx";
@@ -20,14 +21,16 @@ function App() {
 
       {/* <Parent/> */}
       {/* <ParentComp/> */}
-      <FruitList/>
+      {/* <FruitList/>
       <Student/>
       <Fruits/>
       <RenderList/>
       <RenderUser/>
       <ShowTask/>
       <ShowProduct/>
-      <RenderUser1/>
+      <RenderUser1/> */}
+
+      <CounterRenderCheck/>
     </>
   )
 }
