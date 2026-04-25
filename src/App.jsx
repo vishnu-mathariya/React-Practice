@@ -1,41 +1,24 @@
+import { useState } from "react";
 import "./App.css";
-import { ParentComp } from "./miniApp/parentComp.jsx";
-import {CounterApp} from "./practiceQues/counterApp.jsx";
-import { CounterRenderCheck } from "./practiceQues/counterRenderCheck.jsx";
-import { FruitList, Fruits, RenderList, RenderUser, RenderUser1, ShowProduct, ShowTask, Student } from "./practiceQues/list&Keys.jsx";
-import { LoginLogout } from "./practiceQues/loginLogout.jsx";
-import { Parent } from "./practiceQues/parent.jsx";
-import { PassCityPtoC } from "./practiceQues/passCityPtoC.jsx";
-import { PassingPropsPtoC } from "./practiceQues/passingPropsPtoC.jsx";
-import { ToggleBtn } from "./practiceQues/toggleBtn.jsx";
+
 import { Count } from "./useEffectQues/count1.jsx";
+import { Count2 } from "./useEffectQues/count2.jsx";
+
+
 
 function App() {
+  const [show, setShow] =useState(true)
   return (
     <>
-      {/* <CounterApp /> */}
-      {/* <ToggleBtn /> */}
-      {/* <LoginLogout /> */}
-      {/* <PassingPropsPtoC  name ="vishnu" age={25}/> */}
+      {/* <Count/> */}
 
-      {/* <PassCityPtoC City="Pune"/> */}
+      {/* <Count2 /> */}
 
-      {/* <Parent/> */}
-      {/* <ParentComp/> */}
-      {/* <FruitList/>
-      <Student/>
-      <Fruits/>
-      <RenderList/>
-      <RenderUser/>
-      <ShowTask/>
-      <ShowProduct/>
-      <RenderUser1/> */}
+      <button onClick={() => setShow(!show)}>Toggle comp </button>
 
-      {/* <CounterRenderCheck/> */}
-
-      <Count/>
+      {show && <Count2/>}
     </>
-  )
+  );
 }
 
 export default App;
