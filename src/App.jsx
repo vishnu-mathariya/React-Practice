@@ -8,6 +8,7 @@ import { Parent } from "./practiceQues/parent.jsx";
 import { PassCityPtoC } from "./practiceQues/passCityPtoC.jsx";
 import { PassingPropsPtoC } from "./practiceQues/passingPropsPtoC.jsx";
 import { ToggleBtn } from "./practiceQues/toggleBtn.jsx";
+import { Count } from "./useEffectQues/count1.jsx";
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
       <ShowProduct/>
       <RenderUser1/> */}
 
-      <CounterRenderCheck/>
+      {/* <CounterRenderCheck/> */}
+
+      <Count/>
     </>
   )
 }
