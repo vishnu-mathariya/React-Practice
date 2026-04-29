@@ -5,6 +5,7 @@ import { Count } from "./useEffectQues/count1.jsx";
 import { Count2 } from "./useEffectQues/count2.jsx";
 import { Count3 } from "./useEffectQues/count3.jsx";
 import { Count4 } from "./useEffectQues/count4.jsx";
+import { Count5 } from "./useEffectQues/count5.jsx";
 
 
 
@@ -22,7 +23,9 @@ function App() {
 
       {/* <Count3/> */}
 
-      <Count4/>
+      {/* <Count4/> */}
+
+      {/* <Count5/> */}
     </>
   );
 }
