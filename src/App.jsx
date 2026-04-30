@@ -9,6 +9,8 @@ import { Count5 } from "./useEffectQues/count5.jsx";
 import { Count6 } from "./useEffectQues/count6.jsx";
 import { Count7 } from "./useEffectQues/count7.jsx";
 import { Count8 } from "./useEffectQues/count8.jsx";
+import { FetchDataFromAPI } from "./useEffectQues/fetchData.jsx";
+import { FetchTitle } from "./useEffectQues/fetchTitle.jsx";
 
 
 
@@ -34,6 +36,9 @@ function App() {
       {/* <Count7/> */}
 
       {/* <Count8/> */}
+
+      {/* <FetchDataFromAPI/> */}
+      <FetchTitle/>
     </>
   );
 }
