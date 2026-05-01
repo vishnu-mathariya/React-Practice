@@ -10,7 +10,9 @@ import { Count6 } from "./useEffectQues/count6.jsx";
 import { Count7 } from "./useEffectQues/count7.jsx";
 import { Count8 } from "./useEffectQues/count8.jsx";
 import { FetchDataFromAPI } from "./useEffectQues/fetchData.jsx";
+import { FetchNameEmail } from "./useEffectQues/fetchNameEmail.jsx";
 import { FetchTitle } from "./useEffectQues/fetchTitle.jsx";
+import { ShowUserName } from "./useEffectQues/showUserName.jsx";
 
 
 
@@ -38,7 +40,9 @@ function App() {
       {/* <Count8/> */}
 
       {/* <FetchDataFromAPI/> */}
-      <FetchTitle/>
+      {/* <FetchTitle/> */}
+      {/* <FetchNameEmail/> */}
+      <ShowUserName/>
     </>
   );
 }
