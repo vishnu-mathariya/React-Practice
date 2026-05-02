@@ -4,6 +4,7 @@ import { FetchUsersWithErrorHandling } from "./useEffectQues/fetchUsersWithError
 
 import { LoadingState } from "./useEffectQues/loadingState.jsx";
 import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
+import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -15,7 +16,8 @@ function App() {
 
       {/* <LoadingState2/> */}
 
-      <FetchUsersWithErrorHandling/>
+      {/* <FetchUsersWithErrorHandling/> */}
+      <RetryBtnWithErrorHandling/>
     </>
   );
 }
