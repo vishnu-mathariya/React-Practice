@@ -1,44 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export const RetryBtnWithErrorHandling = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [btn, setBtn] = useState();
 
-  const fetchUsers = () =>{
-    
-    fetch("https://jsonplaceholder.typicode.com/usersrr")
+  const timeoutRef = useRef(null);
+
+  const fetchUsers = () => {
+    setError(null);
+    setLoading(true);
+
+    fetch("https://jsonplaceholder.typicode.com/usersr")
       .then((res) => {
-        if(!res.ok) throw new Error("Res is not okk ")
+        if (!res.ok) throw new Error("Res is not okk ");
         return res.json();
       })
       .then((data) => {
-        setUsers(data);
+        timeoutRef.current = setTimeout(() => {
+          console.log("Loading...");
+          setUsers(data);
+          setLoading(false);
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
-        setError("Error occured")
-      })
-      .finally(() => setLoading(false));
-  }
+
+        timeoutRef.current = setTimeout(() => {
+          setError("Error occured");
+          setLoading(false);
+        }, 2000);
+      });
+  };
 
   useEffect(() => {
-    fetchUsers()
-    
-  }, [btn]);
+    fetchUsers();
 
-  
-
-  
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <div>
       <h2>Users</h2>
 
       {error ? (
-        <p>{error}</p>
-        
+        <>
+          <p>{error}</p>
+          <button onClick={fetchUsers}>Retry</button>
+        </>
       ) : loading ? (
         <p>Loading...</p>
       ) : (
@@ -48,8 +59,6 @@ export const RetryBtnWithErrorHandling = () => {
           ))}
         </ul>
       )}
-
-      <button onClick={() => setBtn(!btn)}>Retry</button>
     </div>
   );
 };
