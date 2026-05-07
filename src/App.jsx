@@ -4,6 +4,7 @@ import { FetchUsersWithErrorHandling } from "./useEffectQues/fetchUsersWithError
 
 import { LoadingState } from "./useEffectQues/loadingState.jsx";
 import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
+import { LoadpostsWithPagination } from "./useEffectQues/loadpostsWithPagination.jsx";
 import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
 import { SearchPostsById } from "./useEffectQues/searchPostsById.jsx";
 import { SearchUserById } from "./useEffectQues/searchUserById.jsx";
@@ -22,7 +23,8 @@ function App() {
       {/* <RetryBtnWithErrorHandling/> */}
       {/* <SearchUserById/> */}
 
-      <SearchPostsById/>
+      {/* <SearchPostsById/> */}
+      <LoadpostsWithPagination/>
     </>
   );
 }
