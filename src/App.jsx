@@ -5,6 +5,7 @@ import { FetchUsersWithErrorHandling } from "./useEffectQues/fetchUsersWithError
 import { LoadingState } from "./useEffectQues/loadingState.jsx";
 import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
 import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
+import { SearchPostsById } from "./useEffectQues/searchPostsById.jsx";
 import { SearchUserById } from "./useEffectQues/searchUserById.jsx";
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
 
       {/* <FetchUsersWithErrorHandling/> */}
       {/* <RetryBtnWithErrorHandling/> */}
-      <SearchUserById/>
+      {/* <SearchUserById/> */}
+
+      <SearchPostsById/>
     </>
   );
 }
