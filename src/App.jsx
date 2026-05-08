@@ -10,6 +10,7 @@ import { LoadpostsWithPagination } from "./useEffectQues/loadpostsWithPagination
 import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
 import { SearchPostsById } from "./useEffectQues/searchPostsById.jsx";
 import { SearchUserById } from "./useEffectQues/searchUserById.jsx";
+import { SearchWhileTypingWithDebounce } from "./useEffectQues/searchWhileTypingWithDebounce.jsx";
 
 function App() {
   // const [show, setShow] = useState(true);
@@ -28,7 +29,8 @@ function App() {
       {/* <SearchPostsById/> */}
       {/* <LoadpostsWithPagination/> */}
       {/* <LoadCommentsWithPagination/> */}
-      <InfiniteScrollSimulation/>
+      {/* <InfiniteScrollSimulation/> */}
+      <SearchWhileTypingWithDebounce/>
     </>
   );
 }
