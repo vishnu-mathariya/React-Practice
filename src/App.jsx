@@ -1,6 +1,8 @@
 // import { useState } from "react";
 import "./App.css";
 import { FetchUsersWithErrorHandling } from "./useEffectQues/fetchUsersWithErrorHandling.jsx";
+import { InfiniteScrollSimulation } from "./useEffectQues/infiniteScrollSimulation.jsx";
+import { LoadCommentsWithPagination } from "./useEffectQues/loadCommentsWithPagination.jsx";
 
 import { LoadingState } from "./useEffectQues/loadingState.jsx";
 import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
@@ -24,7 +26,9 @@ function App() {
       {/* <SearchUserById/> */}
 
       {/* <SearchPostsById/> */}
-      <LoadpostsWithPagination/>
+      {/* <LoadpostsWithPagination/> */}
+      {/* <LoadCommentsWithPagination/> */}
+      <InfiniteScrollSimulation/>
     </>
   );
 }
