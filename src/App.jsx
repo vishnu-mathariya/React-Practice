@@ -9,6 +9,7 @@ import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
 import { LoadpostsWithPagination } from "./useEffectQues/loadpostsWithPagination.jsx";
 import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
 import { SearchPostsById } from "./useEffectQues/searchPostsById.jsx";
+import { SearchPostsByTitle } from "./useEffectQues/searchPostsByTitle.jsx";
 import { SearchUserById } from "./useEffectQues/searchUserById.jsx";
 import { SearchWhileTypingWithDebounce } from "./useEffectQues/searchWhileTypingWithDebounce.jsx";
 
@@ -30,7 +31,8 @@ function App() {
       {/* <LoadpostsWithPagination/> */}
       {/* <LoadCommentsWithPagination/> */}
       {/* <InfiniteScrollSimulation/> */}
-      <SearchWhileTypingWithDebounce/>
+      {/* <SearchWhileTypingWithDebounce/> */}
+      <SearchPostsByTitle/>
     </>
   );
 }
