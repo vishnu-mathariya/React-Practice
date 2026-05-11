@@ -8,6 +8,8 @@ import { LoadingState } from "./useEffectQues/loadingState.jsx";
 import { LoadingState2 } from "./useEffectQues/loadingState2.jsx";
 import { LoadpostsWithPagination } from "./useEffectQues/loadpostsWithPagination.jsx";
 import { RetryBtnWithErrorHandling } from "./useEffectQues/retryBtnWithErrorHandling.jsx";
+import { SearchAlbumsByTitle } from "./useEffectQues/searchAlbumsByTitle.jsx";
+import { SearchPhotosByTitle } from "./useEffectQues/searchPhotosByTitle.jsx";
 import { SearchPostsById } from "./useEffectQues/searchPostsById.jsx";
 import { SearchPostsByTitle } from "./useEffectQues/searchPostsByTitle.jsx";
 import { SearchTodosByTaskTitle } from "./useEffectQues/searchTodosByTaskTitle.jsx";
@@ -34,7 +36,9 @@ function App() {
       {/* <InfiniteScrollSimulation/> */}
       {/* <SearchWhileTypingWithDebounce/> */}
       {/* <SearchPostsByTitle/> */}
-      <SearchTodosByTaskTitle/>
+      {/* <SearchTodosByTaskTitle/> */}
+      {/* <SearchAlbumsByTitle/> */}
+      <SearchPhotosByTitle/>
     </>
   );
 }
