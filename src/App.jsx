@@ -1,5 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
+import DateCalculation from "./assets/project/dateCalculation.jsx";
+import RegisterForm from "./assets/project/registerForm.jsx";
 import { FetchUsersWithErrorHandling } from "./useEffectQues/fetchUsersWithErrorHandling.jsx";
 import { InfiniteScrollSimulation } from "./useEffectQues/infiniteScrollSimulation.jsx";
 import { LoadCommentsWithPagination } from "./useEffectQues/loadCommentsWithPagination.jsx";
@@ -38,7 +40,10 @@ function App() {
       {/* <SearchPostsByTitle/> */}
       {/* <SearchTodosByTaskTitle/> */}
       {/* <SearchAlbumsByTitle/> */}
-      <SearchPhotosByTitle/>
+      {/* <SearchPhotosByTitle/> */}
+
+      {/* <RegisterForm/> */}
+      <DateCalculation/>
     </>
   );
 }
