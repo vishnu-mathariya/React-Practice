@@ -1,7 +1,7 @@
 import React from "react";
 
 const DateCalculation = () => {
-  //   console.log();
+  
 
   const handleType = (type) => {
     const date = new Date();
