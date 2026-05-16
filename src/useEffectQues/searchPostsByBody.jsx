@@ -9,14 +9,12 @@ export const SearchPostsByBody = () => {
   const timeoutRef = useRef(null);
 
   useEffect(() => {
-    if (!search.trim()) {
-      setError(null);
-      setPosts([]);
-      return;
-    }
+    if (!search.trim()) return;
+
     timeoutRef.current = setTimeout(() => {
       setError(null);
       setLoading(true);
+
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => {
           if (!res.ok) {
@@ -25,10 +23,11 @@ export const SearchPostsByBody = () => {
           return res.json();
         })
         .then((data) => {
-          const filteredPosts = data.filter((posts) => 
-            posts.body.toLowerCase().includes(search.toLowerCase()))
-           const limitedPosts = filteredPosts.slice(0, 10);
-          
+          const filteredPosts = data.filter((posts) =>
+            posts.body.toLowerCase().includes(search.toLowerCase()),
+          );
+          const limitedPosts = filteredPosts.slice(0, 10);
+
           setPosts(limitedPosts);
         })
         .catch((err) => {
@@ -42,6 +41,16 @@ export const SearchPostsByBody = () => {
       clearTimeout(timeoutRef.current);
     };
   }, [search]);
+
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+
+    if (!value.trim()) {
+      setPosts([]);
+      setError(null);
+    }
+  };
   return (
     <div>
       <h2>Search Posts By Body</h2>
@@ -49,7 +58,7 @@ export const SearchPostsByBody = () => {
         type="text"
         placeholder="Search..."
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={handleSearch}
       />
 
       {error ? (
