@@ -1,8 +1,6 @@
 import React from "react";
 
 const DateCalculation = () => {
-  
-
   const handleType = (type) => {
     const date = new Date();
 
@@ -30,19 +28,15 @@ const DateCalculation = () => {
       date.setFullYear(date.getFullYear() + 1);
 
       console.log("Next year :", date.getFullYear());
-    } 
-    else if(type === "time" ){
-        date.setHours(date.getHours() + 5);
-        console.log("Time + 5 hr:",
-        date.toLocaleTimeString())
-        
+    } else if (type === "time") {
+      date.setHours(date.getHours() + 5);
+      console.log("Time + 5 hr:", date.toLocaleTimeString());
     }
   };
 
   return (
     <div>
-
-        <h2>Date Calculation</h2>
+      <h2>Date Calculation</h2>
       <button onClick={() => handleType("today")}>Today</button>
       <button onClick={() => handleType("yesterday")}> Yesterday</button>
       <button onClick={() => handleType("nextMonth")}>Next Month</button>

@@ -1,7 +1,6 @@
 import { Input } from "postcss";
 import React, { useState } from "react";
 
-
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
