@@ -98,13 +98,12 @@ export const SearchCommentsByEmail = () => {
   const [loading, setLoading] = useState(false);
   const [comments, setComments] = useState([]);
 
-  const timeoutRef =  useRef(null)
+  const timeoutRef = useRef(null);
   useEffect(() => {
-
-    if(!search.trim()) return;
+    if (!search.trim()) return;
     const fetchComments = async () => {
-      setError(null)
-      setLoading(true)
+      setError(null);
+      setLoading(true);
       try {
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/comments",
@@ -114,8 +113,8 @@ export const SearchCommentsByEmail = () => {
           comment.email.toLowerCase().includes(search.toLowerCase()),
         );
 
-         const limitedComments = filteredComments.slice(0,7)
-         setComments(limitedComments)
+        const limitedComments = filteredComments.slice(0, 7);
+        setComments(limitedComments);
       } catch (err) {
         console.log(err);
         setError("Error occured");
@@ -124,32 +123,35 @@ export const SearchCommentsByEmail = () => {
       }
     };
 
-   timeoutRef.current =  setTimeout(() => {
-      fetchComments()
+    timeoutRef.current = setTimeout(() => {
+      fetchComments();
     }, 800);
 
-    return () =>{
-      clearTimeout(timeoutRef.current)
-    }
-
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
   }, [search]);
 
+  const handleChanage = (e) => {
+    const value = e.target.value;
 
- const  handleChanage = (e) =>{
-  const value = e.target.value
+    setSearch(value);
 
-  setSearch(value)
-
-  if(!value.trim()){
-    setError(null)
-    setComments([])
-  }
- }
+    if (!value.trim()) {
+      setError(null);
+      setComments([]);
+    }
+  };
 
   return (
     <div>
       <h2>Search Comments By Email</h2>
-      <input type="text" placeholder="Enter email..."value={search} onChange={handleChanage} />
+      <input
+        type="text"
+        placeholder="Enter email..."
+        value={search}
+        onChange={handleChanage}
+      />
 
       {error ? (
         <p>{error}</p>
@@ -160,11 +162,11 @@ export const SearchCommentsByEmail = () => {
           {comments.map((comment) => (
             <li key={comment.id}>
               Name : {comment.name}
-              <br/>
+              <br />
               Email : {comment.email}
-              <br/>
+              <br />
               Comments : {comment.body}
-              <hr/>
+              <hr />
             </li>
           ))}
         </ul>
