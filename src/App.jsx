@@ -4,19 +4,19 @@ import { SearchPostsByTitle1 } from "./useEffectQues/SearchPostsByTitle1.jsx";
 import { SearchTodosByUserId } from "./useEffectQues/SearchTodosByUserId.jsx";
 import { SearchUserByName } from "./useEffectQues/searchUserByName.jsx";
 import { SearchUsersByCompanyName } from "./useEffectQues/SearchUsersByCompanyName.jsx";
+import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
 
 function App() {
   return (
     <>
-      
       {/* <SearchUserByName/> */}
       {/* <SearchPostsByBody/> */}
       {/* <SearchCommentsByEmail/> */}
       {/* <SearchUsersByCompanyName/> */}
 
       {/* <SearchTodosByUserId/> */}
-      <SearchPostsByTitle1/>
-      
+      {/* <SearchPostsByTitle1/> */}
+      <CalculateTotalPrice />
     </>
   );
 }
