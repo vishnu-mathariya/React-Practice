@@ -5,8 +5,10 @@ import { SearchTodosByUserId } from "./useEffectQues/SearchTodosByUserId.jsx";
 import { SearchUserByName } from "./useEffectQues/searchUserByName.jsx";
 import { SearchUsersByCompanyName } from "./useEffectQues/SearchUsersByCompanyName.jsx";
 import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
+import { CharacterCounter } from "./useMemoQues/CharacterCounter.jsx";
 import { EvenNumberCounter } from "./useMemoQues/EvenNumberCounter.jsx";
 import { UppercaseConverter } from "./useMemoQues/UppercaseConverter.jsx";
+import { WordCounter } from "./useMemoQues/WordCounter.jsx";
 
 function App() {
   return (
@@ -21,7 +23,11 @@ function App() {
       {/* <CalculateTotalPrice /> */}
       {/* <EvenNumberCounter/> */}
 
-      <UppercaseConverter/>
+      {/* <UppercaseConverter/> */}
+
+      {/* <CharacterCounter/> */}
+
+      <WordCounter />
     </>
   );
 }
