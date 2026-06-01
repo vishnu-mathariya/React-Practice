@@ -6,6 +6,7 @@ import { SearchUserByName } from "./useEffectQues/searchUserByName.jsx";
 import { SearchUsersByCompanyName } from "./useEffectQues/SearchUsersByCompanyName.jsx";
 import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
 import { EvenNumberCounter } from "./useMemoQues/EvenNumberCounter.jsx";
+import { UppercaseConverter } from "./useMemoQues/UppercaseConverter.jsx";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
       {/* <SearchTodosByUserId/> */}
       {/* <SearchPostsByTitle1/> */}
       {/* <CalculateTotalPrice /> */}
-      <EvenNumberCounter/>
+      {/* <EvenNumberCounter/> */}
+
+      <UppercaseConverter/>
     </>
   );
 }
