@@ -7,7 +7,9 @@ import { SearchUsersByCompanyName } from "./useEffectQues/SearchUsersByCompanyNa
 import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
 import { CharacterCounter } from "./useMemoQues/CharacterCounter.jsx";
 import { EvenNumberCounter } from "./useMemoQues/EvenNumberCounter.jsx";
+import { ReverseText } from "./useMemoQues/ReverseText.jsx";
 import { UppercaseConverter } from "./useMemoQues/UppercaseConverter.jsx";
+import { VowelCounter } from "./useMemoQues/VowelCounter.jsx";
 import { WordCounter } from "./useMemoQues/WordCounter.jsx";
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
 
       {/* <CharacterCounter/> */}
 
-      <WordCounter />
+      {/* <WordCounter /> */}
+      {/* <ReverseText /> */}
+      <VowelCounter/>
     </>
   );
 }
