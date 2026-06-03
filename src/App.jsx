@@ -8,6 +8,7 @@ import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
 import { CharacterCounter } from "./useMemoQues/CharacterCounter.jsx";
 import { EvenNumberCounter } from "./useMemoQues/EvenNumberCounter.jsx";
 import { EvenNumberFilter } from "./useMemoQues/EvenNumberFilter.jsx";
+import { ProductSearch } from "./useMemoQues/ProductSearch.jsx";
 import { ReverseText } from "./useMemoQues/ReverseText.jsx";
 import { SearchUsers } from "./useMemoQues/SearchUsers.jsx";
 import { UppercaseConverter } from "./useMemoQues/UppercaseConverter.jsx";
@@ -36,7 +37,9 @@ function App() {
       {/* <VowelCounter/> */}
       {/* <EvenNumberFilter/> */}
 
-      <SearchUsers/>
+      {/* <SearchUsers/> */}
+
+      <ProductSearch/>
     </>
   );
 }
