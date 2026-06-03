@@ -5,17 +5,35 @@ export const SearchUsers = () => {
 
   const users = ["Vishnu", "Rahul", "Amit", "Suresh", "Priya", "Pooja"];
 
-  useMemo(() => {
-    for(let i=0; i< users.length; i++){
-      
-
+  const filteredUsers = useMemo(() => {
+    let result = [];
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].toLowerCase().includes(search.toLowerCase())) {
+        result.push(users[i]);
+      }
     }
-  },[search])
+    return result;
+  }, [search]);
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div>
       <h2>Search Users</h2>
 
-      <input type="text" placeholder="Search users..." value={search} />
+      <p>Search: {search}</p>
+      {filteredUsers.map((user) => (
+        <p key={user}>{user}</p>
+      ))}
+
+      <input
+        type="text"
+        placeholder="Search users..."
+        value={search}
+        onChange={handleSearch}
+      />
     </div>
   );
 };
