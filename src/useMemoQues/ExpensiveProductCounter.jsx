@@ -15,12 +15,18 @@ export const ExpensiveProductCounter = () => {
     let result = [];
 
     for (let i = 0; i < products.length; i++) {
-      if (products[i].price >= minPrice) {
+      if (products[i].price <= Number(minPrice)) {
         result.push(products[i]);
       }
     }
+    console.log(`minPrice: ${minPrice}`);
+
     return result;
   }, [minPrice]);
+
+  const productCount = useMemo(() => {
+    return filteredProducts.length;
+  }, [filteredProducts]);
 
   const handleInput = (e) => {
     setMinPrice(e.target.value);
@@ -30,13 +36,13 @@ export const ExpensiveProductCounter = () => {
       <h2>Expensive Product Counter</h2>
       <p>Minimum Price: {minPrice}</p>
 
-      {products.map((product) => (
-        <li key={product.id}>
-          {product.name} - {product.price}
-        </li>
+      {filteredProducts.map((product) => (
+        <p key={product.id}>
+          {product.name} - ₹{product.price}
+        </p>
       ))}
 
-      <p>Total Matching product: {filteredProducts}</p>
+      <p>Total Matching product: {productCount}</p>
 
       <input
         type="number"
