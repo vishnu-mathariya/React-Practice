@@ -8,6 +8,7 @@ import { CalculateTotalPrice } from "./useMemoQues/CalculateTotalPrice.jsx";
 import { CharacterCounter } from "./useMemoQues/CharacterCounter.jsx";
 import { EvenNumberCounter } from "./useMemoQues/EvenNumberCounter.jsx";
 import { EvenNumberFilter } from "./useMemoQues/EvenNumberFilter.jsx";
+import { ExpensiveProductCounter } from "./useMemoQues/ExpensiveProductCounter.jsx";
 import { ProductSearch } from "./useMemoQues/ProductSearch.jsx";
 import { ReverseText } from "./useMemoQues/ReverseText.jsx";
 import { SearchUsers } from "./useMemoQues/SearchUsers.jsx";
@@ -39,7 +40,9 @@ function App() {
 
       {/* <SearchUsers/> */}
 
-      <ProductSearch/>
+      {/* <ProductSearch/> */}
+
+      <ExpensiveProductCounter/>
     </>
   );
 }
