@@ -12,6 +12,7 @@ import { ExpensiveProductCounter } from "./useMemoQues/ExpensiveProductCounter.j
 import { ProductSearch } from "./useMemoQues/ProductSearch.jsx";
 import { ReverseText } from "./useMemoQues/ReverseText.jsx";
 import { SearchUsers } from "./useMemoQues/SearchUsers.jsx";
+import { SortProductsByPrice } from "./useMemoQues/SortProductsByPrice.jsx";
 import { UppercaseConverter } from "./useMemoQues/UppercaseConverter.jsx";
 import { VowelCounter } from "./useMemoQues/VowelCounter.jsx";
 import { WordCounter } from "./useMemoQues/WordCounter.jsx";
@@ -42,7 +43,9 @@ function App() {
 
       {/* <ProductSearch/> */}
 
-      <ExpensiveProductCounter/>
+      {/* <ExpensiveProductCounter/> */}
+
+      <SortProductsByPrice/>
     </>
   );
 }
