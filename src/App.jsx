@@ -1,4 +1,5 @@
 import { CounterWithCallback } from "./useCallbackQues/BasicCounter.jsx";
+import { TextUpdater } from "./useCallbackQues/TextUpdater.jsx";
 import { SearchCommentsByEmail } from "./useEffectQues/SearchCommentsByEmail.jsx";
 import { SearchPostsByBody } from "./useEffectQues/searchPostsByBody.jsx";
 import { SearchPostsByTitle1 } from "./useEffectQues/SearchPostsByTitle1.jsx";
@@ -48,7 +49,10 @@ function App() {
 
       {/* <SortProductsByPrice/> */}
 
-      <CounterWithCallback/>
+      {/* <CounterWithCallback/> */}
+
+      <TextUpdater/>
+
     </>
   );
 }
