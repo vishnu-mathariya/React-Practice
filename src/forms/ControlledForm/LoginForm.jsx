@@ -1,21 +1,21 @@
 import React from "react";
 import { useState } from "react";
 
-export const ControlledForm = () => {
+export const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prev) => ({ ...prev, [name]: value }));
-  // };
-
   const handleChange = (e) => {
-    setFormData(e.target.value);
-    setFormData("" + e.target.name, e.target.value);
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  // const handleChange = (e) => {
+  //   setFormData(e.target.value);
+  //   setFormData("" + e.target.name, e.target.value);
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form submitted successfully");
